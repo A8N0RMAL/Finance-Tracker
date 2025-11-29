@@ -1,0 +1,31 @@
+﻿@model Expense
+
+<div class="row">
+
+    <h2>Add Expense</h2>
+
+    <div class="col-md-6">
+
+        <form asp-action="Create" method="post">
+            <div class="form-group mb-3">
+                <label asp-for="Description" class="form-control"></label>
+                <input asp-for="Description" class="form-control" />
+            </div>
+        
+            <div class="form-group mb-3">
+                <label asp-for="Amount" class="form-control"></label>
+                <input asp-for="Amount" class="form-control" type="number" step="0.01" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Category" class="form-control"></label>
+                <input asp-for="Category" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Add Expense</button>
+            </div>
+        </form>
+
+    </div>
+</div>
